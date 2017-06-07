@@ -40,7 +40,7 @@
             for (var i = 0; i < products.length; i++) {
                 var tr = document.createElement('TR');
                 var td = document.createElement('TD');
-                td.appendChild(document.createTextNode(products[i]));
+                td.appendChild(document.createTextNode(products[i].productname));
                 tr.appendChild(td);
                 tableBody.appendChild(tr);
             }
