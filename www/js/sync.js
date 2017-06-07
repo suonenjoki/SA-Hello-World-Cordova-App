@@ -1,4 +1,4 @@
- var datasetId = "Products";
+ var datasetId = "Product";
     var products = [];
 
     $fh.sync.init({
