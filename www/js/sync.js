@@ -37,10 +37,10 @@
 
             table.border = '1';
 
-            for (var i = 0; i < res.length; i++) {
+            for (var i = 0; i < products.length; i++) {
                 var tr = document.createElement('TR');
                 var td = document.createElement('TD');
-                td.appendChild(document.createTextNode(res[i]));
+                td.appendChild(document.createTextNode(products[i]));
                 tr.appendChild(td);
                 tableBody.appendChild(tr);
             }
