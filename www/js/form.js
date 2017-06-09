@@ -37,6 +37,6 @@ $fh.forms.getForms({"fromRemote": false}, function(err, forms){
 $fh.forms.getSubmissions({}, function (err, submissions) {
   if (err) console.error(err);
 
-  console.log('Array of completed submissions', submissions);
+  console.log('Array of completed submissions', JSON.stringify(submissions));
 });
 
