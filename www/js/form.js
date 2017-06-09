@@ -42,7 +42,7 @@ var getForm = function() {
         var formName = form.getName();
         var formDesc = form.getDescription();
         console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
-    })
+    });
 };
 
 
