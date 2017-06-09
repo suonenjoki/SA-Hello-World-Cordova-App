@@ -4,10 +4,8 @@ $fh.forms.init({}, function(err){
         alert("Error Initialising Forms " + err);
     } else {
 
-        var params = {"fromRemote": true};
-
-        $fh.forms.getForms(params, function(err1, forms){
-            if(err) {
+        $fh.forms.getForms({"fromRemote": true}, function(err1, forms){
+            if(err1) {
                 console.log("Error getting Forms " + err1);
                 alert(err1);
             } else {
