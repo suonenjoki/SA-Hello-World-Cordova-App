@@ -6,7 +6,11 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        getFormList();
+        var formList = getFormList();
+
+        
+
+
     }
 });
 
@@ -16,8 +20,12 @@ var getFormList = function() {
     $fh.forms.getForms({"fromRemote": true}, function(err, forms){
         if(err) {
             console.log("Error getting Forms " + JSON.stringify(err));
-        } 
-        console.log("Forms: " + JSON.stringify(forms));
+            return [];
+        } else {
+            console.log("Forms: " + JSON.stringify(forms));
+            return forms.forms;
+        }
+        
     });
 };
 
