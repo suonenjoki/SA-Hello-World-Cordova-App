@@ -8,10 +8,9 @@ $fh.forms.init({}, function(err){
 $fh.forms.getForms({"fromRemote": true}, function(err, forms){
     if(err) {
         console.log("Error getting Forms " + JSON.stringify(err));
-         console.log("Forms: " + JSON.stringify(forms));
-    } else {
+    } 
         console.log("Forms: " + JSON.stringify(forms));
-    }
+    
 });
 
 */
