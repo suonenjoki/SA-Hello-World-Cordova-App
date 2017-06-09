@@ -1,7 +1,6 @@
 $fh.forms.init({}, function(err){
     if(err){
         console.log("Error Initialising Forms " + err);
-        alert("Error Initialising Forms " +JSON.stringify(err));
     }
 });
 
@@ -12,6 +11,14 @@ $fh.forms.getForms({"fromRemote": true}, function(err, forms){
     } else {
         console.log("Forms: " + JSON.stringify(forms));
     }
+});
+
+
+
+$fh.forms.getTheme({"css": true}, function(err, theme){
+    if(err) console.error("Error getting Theme: " + JSON.stringify(err));
+
+    console.log(theme);
 });
 
 
