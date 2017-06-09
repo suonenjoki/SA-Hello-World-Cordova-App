@@ -18,7 +18,7 @@ var getFormList = function() {
             console.log("Error getting Forms " + JSON.stringify(err));
         } 
         console.log("Forms: " + JSON.stringify(forms));
-    })
+    });
 };
 
 
