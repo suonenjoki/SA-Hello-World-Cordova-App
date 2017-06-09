@@ -8,7 +8,24 @@ $fh.forms.init({}, function(err){
         console.log("Forms initialized");
         var formList = getFormList();
 
-        
+         var myTableDiv = document.getElementById("forms-div");
+            var table = document.createElement('TABLE');
+            var tableBody = document.createElement('TBODY');
+
+            table.border = '1';
+
+            for (var i = 0; i < formList.length; i++) {
+                var tr = document.createElement('TR');
+                var td = document.createElement('TD');
+                td.appendChild(document.createTextNode(formList[i].name));
+                tr.appendChild(td);
+                tableBody.appendChild(tr);
+            }
+
+            table.appendChild(tableBody);
+
+            myTableDiv.innerHTML = " ";
+            myTableDiv.appendChild(table);
 
 
     }
