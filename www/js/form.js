@@ -23,7 +23,7 @@ var params = {
 };
 
 $fh.forms.getForm(params, function(err, form){
-if(err) console.error(err);
+if(err) console.log("Error getting Form " + JSON.stringify(err));
 
 var formName = form.getName();
 var formDesc = form.getDescription();
