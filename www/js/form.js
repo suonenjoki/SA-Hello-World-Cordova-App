@@ -14,10 +14,11 @@ $fh.forms.getForms({"fromRemote": true}, function(err, forms){
 });
 
 
-
+/*
 $fh.forms.getSubmissions({}, function (err, submissions) {
   if (err) console.error(err);
 
   console.log('Array of completed submissions', JSON.stringify(submissions));
 });
+*/
 
