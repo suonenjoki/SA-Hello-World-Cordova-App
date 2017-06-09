@@ -8,7 +8,7 @@ $fh.forms.init({}, function(err){
         console.log("Forms initialized");
         var formList = getFormList();
 
-         var myTableDiv = document.getElementById("forms-div");
+         var myTableDiv = document.getElementById("form-div");
             var table = document.createElement('TABLE');
             var tableBody = document.createElement('TBODY');
 
