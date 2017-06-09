@@ -45,16 +45,6 @@ var getFormList = function() {
 });
 
 
-
-
-        }
-    });
-};
-
-
-
-
-
 var getForm = function() {
     var formId = "5922f56cc606e1e807732c09";
 
