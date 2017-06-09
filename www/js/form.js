@@ -6,7 +6,8 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        var formList = getFormList();
+        var formList = [];
+        formList = getFormList();
 
          var myTableDiv = document.getElementById("form-div");
             var table = document.createElement('TABLE');
