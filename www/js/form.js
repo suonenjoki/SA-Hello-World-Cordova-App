@@ -15,11 +15,29 @@ $fh.forms.getForms({"fromRemote": true}, function(err, forms){
 
 */
 
+var formId = "5922f56cc606e1e807732c09";
+
+var params = {
+ "fromRemote" : true,
+ "formId" : formId
+};
+
+$fh.forms.getForm(params, function(err, form){
+if(err) console.error(err);
+
+var formName = form.getName();
+var formDesc = form.getDescription();
+console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
+});
+
+/*
+
 $fh.forms.getTheme({"css": true}, function(err, theme){
     if(err) console.error("Error getting Theme: " + JSON.stringify(err));
 
     console.log(theme);
 });
+*/
 
 
 /*
