@@ -4,6 +4,7 @@ $fh.forms.init({}, function(err){
     }
 });
 
+/*
 $fh.forms.getForms({"fromRemote": true}, function(err, forms){
     if(err) {
         console.log("Error getting Forms " + JSON.stringify(err));
@@ -13,7 +14,7 @@ $fh.forms.getForms({"fromRemote": true}, function(err, forms){
     }
 });
 
-
+*/
 
 $fh.forms.getTheme({"css": true}, function(err, theme){
     if(err) console.error("Error getting Theme: " + JSON.stringify(err));
