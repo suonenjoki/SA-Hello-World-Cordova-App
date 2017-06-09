@@ -39,6 +39,8 @@ if(fInit) {
         var formDesc = form.getDescription();
         console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
     })
+} else {
+    console.log("fInit = " + fInit);
 }
 
 /*
