@@ -43,6 +43,7 @@ var getFormList = function() {
 
     }
 });
+}
 
 
 var getForm = function() {
