@@ -1,11 +1,18 @@
-var fInit = false;
+
+var formId = "5922f56cc606e1e807732c09";
+
+var params = {
+ "fromRemote" : true,
+ "formId" : formId,
+ "environment": "demos-dev"
+};
 
 $fh.forms.init({}, function(err){
     if(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        fInit = true;
+        getForm();
     }
 });
 
@@ -20,16 +27,10 @@ $fh.forms.getForms({"fromRemote": true}, function(err, forms){
 
 */
 
-var formId = "5922f56cc606e1e807732c09";
 
-var params = {
- "fromRemote" : true,
- "formId" : formId,
- "environment": "demos-dev"
-};
 
-if(fInit) {
 
+var getForm = function() {
     console.log("Getting form " + formId + "...");
 
     $fh.forms.getForm(params, function(err, form){
@@ -39,9 +40,8 @@ if(fInit) {
         var formDesc = form.getDescription();
         console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
     })
-} else {
-    console.log("fInit = " + fInit);
-}
+};
+ 
 
 /*
 
