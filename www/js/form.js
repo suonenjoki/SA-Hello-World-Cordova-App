@@ -1,11 +1,5 @@
 
-var formId = "5922f56cc606e1e807732c09";
 
-var params = {
- "fromRemote" : true,
- "formId" : formId,
- "environment": "demos-dev"
-};
 
 $fh.forms.init({}, function(err){
     if(err){
@@ -16,21 +10,29 @@ $fh.forms.init({}, function(err){
     }
 });
 
-/*
-$fh.forms.getForms({"fromRemote": true}, function(err, forms){
-    if(err) {
-        console.log("Error getting Forms " + JSON.stringify(err));
-    } 
+
+var getFormList = function() {
+    console.log("Getting formList...");
+    $fh.forms.getForms({"fromRemote": true}, function(err, forms){
+        if(err) {
+            console.log("Error getting Forms " + JSON.stringify(err));
+        } 
         console.log("Forms: " + JSON.stringify(forms));
-    
 });
 
-*/
 
 
 
 
 var getForm = function() {
+    var formId = "5922f56cc606e1e807732c09";
+
+    var params = {
+    "fromRemote" : true,
+    "formId" : formId,
+    "environment": "demos-dev"
+    };
+    
     console.log("Getting form " + formId + "...");
 
     $fh.forms.getForm(params, function(err, form){
@@ -41,7 +43,7 @@ var getForm = function() {
         console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
     })
 };
- 
+
 
 /*
 
