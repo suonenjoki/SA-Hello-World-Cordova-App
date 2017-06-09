@@ -7,7 +7,7 @@ $fh.forms.init({}, function(err){
 
 $fh.forms.getForms({"fromRemote": false}, function(err, forms){
     if(err) {
-        console.log("Error getting Forms " + JSON.stringify(err1));
+        console.log("Error getting Forms " + JSON.stringify(err));
     } else {
         var formsList = forms.getFormsList();
         console.log("Forms: " + JSON.stringify(formsList));
