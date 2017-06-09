@@ -30,8 +30,7 @@ var getForm = function() {
 
     var params = {
     "fromRemote" : true,
-    "formId" : formId,
-    "environment": "demos-dev"
+    "formId" : formId
     };
 
     console.log("Getting form " + formId + "...");
