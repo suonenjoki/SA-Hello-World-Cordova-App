@@ -16,34 +16,12 @@ var getFormList = function() {
     $fh.forms.getForms({"fromRemote": true}, function(err, forms){
         if(err) {
             console.log("Error getting Forms " + JSON.stringify(err));
-        } else {
-            console.log("Forms: " + JSON.stringify(forms));
+        } 
+        
+        console.log("Forms: " + JSON.stringify(forms));
 
-        var formList = forms.forms;
-
-         var myTableDiv = document.getElementById("form-div");
-            var table = document.createElement('TABLE');
-            var tableBody = document.createElement('TBODY');
-
-            table.border = '1';
-
-            for (var i = 0; i < formList.length; i++) {
-                var tr = document.createElement('TR');
-                var td = document.createElement('TD');
-                td.appendChild(document.createTextNode(formList[i].name));
-                tr.appendChild(td);
-                tableBody.appendChild(tr);
-            }
-
-            table.appendChild(tableBody);
-
-            myTableDiv.innerHTML = " ";
-            myTableDiv.appendChild(table);
-
-
-    }
 });
-}
+};
 
 
 var getForm = function() {
