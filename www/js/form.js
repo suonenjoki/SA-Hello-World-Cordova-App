@@ -6,8 +6,20 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        var formList = [];
-        formList = getFormList();
+        getFormList();
+}});
+        
+
+
+var getFormList = function() {
+    console.log("Getting formList...");
+    $fh.forms.getForms({"fromRemote": true}, function(err, forms){
+        if(err) {
+            console.log("Error getting Forms " + JSON.stringify(err));
+        } else {
+            console.log("Forms: " + JSON.stringify(forms));
+
+        var formList = forms.forms;
 
          var myTableDiv = document.getElementById("form-div");
             var table = document.createElement('TABLE');
@@ -33,17 +45,9 @@ $fh.forms.init({}, function(err){
 });
 
 
-var getFormList = function() {
-    console.log("Getting formList...");
-    $fh.forms.getForms({"fromRemote": true}, function(err, forms){
-        if(err) {
-            console.log("Error getting Forms " + JSON.stringify(err));
-            return [];
-        } else {
-            console.log("Forms: " + JSON.stringify(forms));
-            return forms.forms;
+
+
         }
-        
     });
 };
 
