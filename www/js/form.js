@@ -1,6 +1,11 @@
+var fInit = false;
+
 $fh.forms.init({}, function(err){
     if(err){
         console.log("Error Initialising Forms " + err);
+    } else {
+        console.log("Forms initialized");
+        fInit = true;
     }
 });
 
@@ -23,13 +28,15 @@ var params = {
  "environment": "demos-dev"
 };
 
-$fh.forms.getForm(params, function(err, form){
-if(err) console.log("Error getting Form " + JSON.stringify(err));
+if(fInit) {
+    $fh.forms.getForm(params, function(err, form){
+        if(err) console.log("Error getting Form " + JSON.stringify(err));
 
-var formName = form.getName();
-var formDesc = form.getDescription();
-console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
-});
+        var formName = form.getName();
+        var formDesc = form.getDescription();
+        console.log('Form Name: ', formName, 'Form Desc: ', formDesc);
+    })
+}
 
 /*
 
