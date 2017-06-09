@@ -29,6 +29,9 @@ var params = {
 };
 
 if(fInit) {
+
+    console.log("Getting form " + formId + "...");
+
     $fh.forms.getForm(params, function(err, form){
         if(err) console.log("Error getting Form " + JSON.stringify(err));
 
