@@ -14,16 +14,16 @@ $fh.forms.init({config: {}}, function(err){
             var formsList = forms.getFormsList();
 
 
-            var myTableDiv = document.getElementById("sync-div");
+            var myTableDiv = document.getElementById("form-div");
             var table = document.createElement('TABLE');
             var tableBody = document.createElement('TBODY');
 
             table.border = '1';
 
-            for (var i = 0; i < products.length; i++) {
+            for (var i = 0; i < formsList.length; i++) {
                 var tr = document.createElement('TR');
                 var td = document.createElement('TD');
-                td.appendChild(document.createTextNode(products[i].productname));
+                td.appendChild(document.createTextNode(formsList[i]));
                 tr.appendChild(td);
                 tableBody.appendChild(tr);
             }
