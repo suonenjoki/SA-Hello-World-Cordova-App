@@ -6,7 +6,7 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        getForm();
+        getFormList();
 }});
         
 
