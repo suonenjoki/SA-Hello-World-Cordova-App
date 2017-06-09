@@ -10,6 +10,7 @@ $fh.forms.init({}, function(err){
                 alert(err1);
             } else {
                 var formsList = forms.getFormsList();
+                console.log("Forms: " + JSON.stringify(formsList));
 
                 var myTableDiv = document.getElementById("form-div");
                 var table = document.createElement('TABLE');
