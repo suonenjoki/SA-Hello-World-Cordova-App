@@ -6,7 +6,7 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        getForm();
+        getFormList();
     }
 });
 
@@ -32,7 +32,7 @@ var getForm = function() {
     "formId" : formId,
     "environment": "demos-dev"
     };
-    
+
     console.log("Getting form " + formId + "...");
 
     $fh.forms.getForm(params, function(err, form){
