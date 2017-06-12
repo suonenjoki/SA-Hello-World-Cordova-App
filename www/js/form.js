@@ -7,8 +7,9 @@ $fh.forms.init({}, function(err){
     } else {
         console.log("Forms initialized");
         //getFormList(getForm, function() {console.log("Form not found");});
-        var forms = getFormList();
-        console.log("FormList: " + JSON.stringify(forms));
+        //var forms = getFormList();
+        getFormList();
+        //console.log("FormList: " + JSON.stringify(forms));
 }});
 
 
@@ -18,11 +19,11 @@ var getFormList = function() {
 
         if(err) {
             console.log("Error getting Forms " + JSON.stringify(err));
-        } else {
+        } 
           console.log("Forms: " + JSON.stringify(forms));
-        }
+        
 
-        return forms;
+        
       });
 };
 
