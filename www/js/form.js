@@ -7,9 +7,11 @@ $fh.forms.init({}, function(err){
     } else {
         console.log("Forms initialized");
         //getFormList(getForm, function() {console.log("Form not found");});
-        //var forms = getFormList();
+        getFormList();
         var formId = "5922f56cc606e1e807732c09";
         getForm(formId);
+        getTheme();
+        getSubmissions();
         //console.log("FormList: " + JSON.stringify(forms));
 }});
 
@@ -75,20 +77,23 @@ var getForm = function(formId) {
 };
 
 
-/*
 
-$fh.forms.getTheme({"css": true}, function(err, theme){
-    if(err) console.error("Error getting Theme: " + JSON.stringify(err));
+var getTheme = function() {
+    console.log("Getting theme...");
+    $fh.forms.getTheme({"css": true}, function(err, theme){
+        if(err) console.error("Error getting Theme: " + JSON.stringify(err));
 
-    console.log(theme);
-});
-*/
+        console.log(theme);
+    });
+};
 
 
-/*
-$fh.forms.getSubmissions({}, function (err, submissions) {
-  if (err) console.error(err);
+var getSubmissions = function() {
+    console.log("Getting submissions...");
+    $fh.forms.getSubmissions({}, function (err, submissions) {
+        if (err) console.error(err);
 
-  console.log('Array of completed submissions', JSON.stringify(submissions));
-});
-*/
+        console.log('Array of completed submissions', JSON.stringify(submissions));
+    });
+};
+
