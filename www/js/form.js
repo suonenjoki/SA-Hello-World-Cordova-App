@@ -7,11 +7,11 @@ $fh.forms.init({}, function(err){
     } else {
         console.log("Forms initialized");
         //getFormList(getForm, function() {console.log("Form not found");});
-        getFormList();
+        //getFormList();
         var formId = "5922f56cc606e1e807732c09";
         getForm(formId);
-        getTheme();
-        getSubmissions();
+        //getTheme();
+        //getSubmissions();
         //console.log("FormList: " + JSON.stringify(forms));
 }});
 
