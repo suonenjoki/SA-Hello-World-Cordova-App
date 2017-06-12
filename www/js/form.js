@@ -6,16 +6,33 @@ $fh.forms.init({}, function(err){
         console.log("Error Initialising Forms " + err);
     } else {
         console.log("Forms initialized");
-        getFormList(getForm, function() {console.log("Form not found");});
+        //getFormList(getForm, function() {console.log("Form not found");});
+        var forms = getFormList();
 }});
 
 
+var getFormList = function() {
+    console.log("Getting formList...");
+    $fh.forms.getForms({"fromRemote": true}, function(err, forms){
 
+        if(err) {
+            console.log("Error getting Forms " + JSON.stringify(err));
+        } else {
+          console.log("Forms: " + JSON.stringify(forms));
+        }
+
+        return forms;
+      });
+};
+
+
+/*
 var getFormList = function(success, error) {
     console.log("Getting formList...");
     $fh.forms.getForms({"fromRemote": true}, function(err, forms){
         if(err) {
             console.log("Error getting Forms " + JSON.stringify(err));
+            return error();
         }
 
         console.log("Forms: " + JSON.stringify(forms));
@@ -32,6 +49,7 @@ var getFormList = function(success, error) {
         error();
 });
 };
+*/
 
 
 var getForm = function(formId) {
