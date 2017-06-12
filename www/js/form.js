@@ -8,6 +8,7 @@ $fh.forms.init({}, function(err){
         console.log("Forms initialized");
         //getFormList(getForm, function() {console.log("Form not found");});
         var forms = getFormList();
+        console.log("FormList: " + JSON.stringify(forms));
 }});
 
 
