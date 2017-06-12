@@ -23,7 +23,7 @@ module.exports = function (grunt) {
       // configurable paths
       app: 'www',
       url: '',
-      default_local_server_url: 'http://localhost:8001'
+      default_local_server_url: 'https://tdahlen-xyocdi2pqg6ktpu7qe5ntr2j-demos-dev.mbaas2.tom.redhatmobile.com/' //'http://localhost:8001'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -82,6 +82,18 @@ module.exports = function (grunt) {
 
     browserify: {
       'www/main.js': ['www/js/init.js']
+    },
+
+    env: {
+      options: {},
+      local: {
+        FH_SERVICE_MAP: function() {
+          var serviceMap = {
+            'xyocdi2pqg6ktpu7qe5ntr2j': 'https://tdahlen-xyocdi2pqg6ktpu7qe5ntr2j-demos-dev.mbaas2.tom.redhatmobile.com/'
+          };
+          return JSON.stringify(serviceMap);
+        }
+      }
     }
   });
 
